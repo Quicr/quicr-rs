@@ -36,7 +36,7 @@ openssl = []
 boringssl = []
 
 # Logging with defmt (for embedded)
-defmt-logging = ["defmt", "embassy-time/defmt"]
+defmt = ["dep:defmt", "embassy-time/defmt"]
 
 [dependencies]
 bytes = { version = "1.7", default-features = false }
@@ -74,6 +74,11 @@ codegen-units = 1
 lto = "fat"
 opt-level = "s"
 overflow-checks = false
+
+[package.metadata.esp-idf-sys]
+extra_components = [
+    { component_dirs = "esp-component" }
+]
 
 [package.metadata.docs.rs]
 default-target = "x86_64-unknown-linux-gnu"

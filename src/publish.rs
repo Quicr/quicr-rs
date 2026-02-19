@@ -11,19 +11,19 @@ use core::sync::atomic::{AtomicBool, Ordering};
 use heapless::Vec as HeaplessVec;
 
 // Conditional logging
-#[cfg(all(feature = "defmt-logging", not(feature = "std")))]
+#[cfg(all(feature = "defmt", not(feature = "std")))]
 use defmt::{debug, error, info, trace, warn};
-#[cfg(all(not(feature = "defmt-logging"), feature = "std"))]
+#[cfg(all(not(feature = "defmt"), feature = "std"))]
 use log::{debug, error, info, trace, warn};
-#[cfg(all(not(feature = "defmt-logging"), not(feature = "std")))]
+#[cfg(all(not(feature = "defmt"), not(feature = "std")))]
 macro_rules! debug { ($($arg:tt)*) => {}; }
-#[cfg(all(not(feature = "defmt-logging"), not(feature = "std")))]
+#[cfg(all(not(feature = "defmt"), not(feature = "std")))]
 macro_rules! error { ($($arg:tt)*) => {}; }
-#[cfg(all(not(feature = "defmt-logging"), not(feature = "std")))]
+#[cfg(all(not(feature = "defmt"), not(feature = "std")))]
 macro_rules! info { ($($arg:tt)*) => {}; }
-#[cfg(all(not(feature = "defmt-logging"), not(feature = "std")))]
+#[cfg(all(not(feature = "defmt"), not(feature = "std")))]
 macro_rules! trace { ($($arg:tt)*) => {}; }
-#[cfg(all(not(feature = "defmt-logging"), not(feature = "std")))]
+#[cfg(all(not(feature = "defmt"), not(feature = "std")))]
 macro_rules! warn { ($($arg:tt)*) => {}; }
 
 #[cfg(feature = "std")]
@@ -43,7 +43,7 @@ use alloc::string::String;
 
 /// Status of a publish track
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash)]
-#[cfg_attr(feature = "defmt-logging", derive(defmt::Format))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PublishStatus {
     /// Track is ready to publish
     Ok,
@@ -100,7 +100,7 @@ impl From<ffi::QuicrPublishStatus> for PublishStatus {
 
 /// Status returned when publishing an object
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash)]
-#[cfg_attr(feature = "defmt-logging", derive(defmt::Format))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum PublishObjectStatus {
     /// Object was published successfully
     Ok,

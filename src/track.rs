@@ -16,7 +16,7 @@ pub struct TrackNamespace {
     entries: Vec<Bytes>,
 }
 
-#[cfg(feature = "defmt-logging")]
+#[cfg(feature = "defmt")]
 impl defmt::Format for TrackNamespace {
     fn format(&self, f: defmt::Formatter) {
         // Format as a path-like string representation
@@ -147,7 +147,7 @@ pub struct FullTrackName {
     pub name: Bytes,
 }
 
-#[cfg(feature = "defmt-logging")]
+#[cfg(feature = "defmt")]
 impl defmt::Format for FullTrackName {
     fn format(&self, f: defmt::Formatter) {
         // Format namespace first

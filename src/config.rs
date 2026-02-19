@@ -20,16 +20,16 @@ use alloc::string::String;
 #[cfg(feature = "std")]
 use std::string::String;
 
-// Conditional logging - use defmt for no_std with defmt-logging feature
-#[cfg(all(feature = "defmt-logging", not(feature = "std")))]
+// Conditional logging - use defmt for no_std with defmt feature
+#[cfg(all(feature = "defmt", not(feature = "std")))]
 use defmt::{debug, trace};
-#[cfg(all(not(feature = "defmt-logging"), feature = "std"))]
+#[cfg(all(not(feature = "defmt"), feature = "std"))]
 use log::{debug, trace};
-#[cfg(all(not(feature = "defmt-logging"), not(feature = "std")))]
+#[cfg(all(not(feature = "defmt"), not(feature = "std")))]
 macro_rules! debug {
     ($($arg:tt)*) => {};
 }
-#[cfg(all(not(feature = "defmt-logging"), not(feature = "std")))]
+#[cfg(all(not(feature = "defmt"), not(feature = "std")))]
 macro_rules! trace {
     ($($arg:tt)*) => {};
 }
