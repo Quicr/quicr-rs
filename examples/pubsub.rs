@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: Copyright (c) 2025 Cisco Systems
+// SPDX-License-Identifier: BSD-2-Clause
+
 //! Pub/Sub Clock Example
 //!
 //! This example demonstrates basic publish/subscribe functionality similar to

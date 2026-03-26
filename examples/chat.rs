@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: Copyright (c) 2025 Cisco Systems
+// SPDX-License-Identifier: BSD-2-Clause
+
 //! Simple Pub/Sub Chat Example
 //!
 //! This example demonstrates how to use quicr.rs for a simple chat application

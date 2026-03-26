@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: Copyright (c) 2024 QuicR Contributors
+// SPDX-FileCopyrightText: Copyright (c) 2025 Cisco Systems
 // SPDX-License-Identifier: BSD-2-Clause
 
 use std::env;

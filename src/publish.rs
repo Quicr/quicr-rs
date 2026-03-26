@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: Copyright (c) 2025 Cisco Systems
+// SPDX-License-Identifier: BSD-2-Clause
+
 //! Publish track functionality using Embassy async runtime
 
 use crate::error::{Error, Result};

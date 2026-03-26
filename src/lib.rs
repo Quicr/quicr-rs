@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: Copyright (c) 2025 Cisco Systems
+// SPDX-License-Identifier: BSD-2-Clause
+
 //! # quicr - Safe Rust FFI Bindings for libquicr
 //!
 //! This crate provides safe Rust bindings for libquicr, a publish/subscribe

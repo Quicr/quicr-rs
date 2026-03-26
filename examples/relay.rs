@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: Copyright (c) 2025 Cisco Systems
+// SPDX-License-Identifier: BSD-2-Clause
+
 //! Simple Relay Server Example
 //!
 //! This example shows how the relay server concept works with quicr.
