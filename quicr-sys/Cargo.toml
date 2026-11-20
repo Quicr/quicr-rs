@@ -1,0 +1,40 @@
+[package]
+name = "quicr-sys"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+description = "Native libquicr build and FFI bindings"
+readme = "README.md"
+keywords = ["moq", "quic", "ffi", "bindings"]
+categories = ["external-ffi-bindings", "network-programming", "multimedia"]
+include = [
+    "build.rs",
+    "wrapper.h",
+    "src/**",
+    "/README.md",
+    "libquicr/CMakeLists.txt",
+    "libquicr/VERSION",
+    "libquicr/package-lock.cmake",
+    "libquicr/cmake/**",
+    "libquicr/include/**",
+    "libquicr/src/**",
+    "libquicr/LICENSE",
+    "libquicr/docs/LICENSE",
+]
+
+links = "quicr"
+
+[features]
+default = ["_openssl"]
+_openssl = ["dep:openssl-sys"]
+mbedtls = []
+
+[dependencies]
+link-cplusplus = "1"
+openssl-sys = { version = "0.9", optional = true }
+
+[build-dependencies]
+cmake = "0.1"
+bindgen = "0.72"

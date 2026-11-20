@@ -1,0 +1,19 @@
+# SPDX-FileCopyrightText: Copyright (c) 2026 Cisco Systems
+# SPDX-License-Identifier: BSD-2-Clause
+
+version = 1
+
+[[annotations]]
+path = [
+    ".gitignore",
+    ".gitmodules",
+    "Cargo.lock",
+    "Cargo.toml",
+    "README.md",
+    "quicr/Cargo.toml",
+    "quicr-sys/Cargo.toml",
+    "quicr-sys/README.md",
+]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "NONE"
+SPDX-License-Identifier = "BSD-2-Clause"

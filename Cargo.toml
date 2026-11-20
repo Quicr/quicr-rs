@@ -1,0 +1,16 @@
+[workspace]
+members = [
+    "quicr",
+    "quicr-sys",
+]
+resolver = "2"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+license = "BSD-2-Clause"
+repository = "https://github.com/quicr/quicr-rs"
+rust-version = "1.85"
+
+[workspace.dependencies]
+quicr-sys = { path = "quicr-sys", version = "0.1.0", default-features = false }

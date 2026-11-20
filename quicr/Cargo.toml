@@ -1,0 +1,18 @@
+[package]
+name = "quicr"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+description = "Safe, native Rust bindings for the libquicr Media over QUIC library"
+readme = "../README.md"
+keywords = ["moq", "quic", "media", "networking"]
+categories = ["api-bindings", "network-programming", "multimedia"]
+
+[features]
+default = ["quicr-sys/default"]
+mbedtls = ["quicr-sys/mbedtls"]
+
+[dependencies]
+quicr-sys.workspace = true
